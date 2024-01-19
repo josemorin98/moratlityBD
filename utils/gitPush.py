@@ -34,9 +34,6 @@ def main():
         branch = "main"
     print("add: '" + add + "' commit: '" + commit + "' branch: '" + branch + "'")
 
-    # command = "cd .."
-    # run_command(command)
-
     command = "git add " + add
     run_command(command)
 
