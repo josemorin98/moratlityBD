@@ -1,0 +1,189 @@
+CVE,DESCRIP,EDAD_NUM,RANGO_EDAD
+1001,Una hora                       ,0,00_04
+1002,Dos horas                      ,0,00_04
+1003,Tres horas                     ,0,00_04
+1004,Cuatro horas                   ,0,00_04
+1005,Cinco horas                    ,0,00_04
+1006,Seis horas                     ,0,00_04
+1007,Siete horas                    ,0,00_04
+1008,Ocho horas                     ,0,00_04
+1009,Nueve horas                    ,0,00_04
+1010,Diez horas                     ,0,00_04
+1011,Once horas                     ,0,00_04
+1012,Doce horas                     ,0,00_04
+1013,Trece horas                    ,0,00_04
+1014,Catorce horas                  ,0,00_04
+1015,Quince horas                   ,0,00_04
+1016,Dieciseis horas                ,0,00_04
+1017,Diecisiete horas               ,0,00_04
+1018,Dieciocho horas                ,0,00_04
+1019,Diecinueve horas               ,0,00_04
+1020,Veinte horas                   ,0,00_04
+1021,Veintiuna horas                ,0,00_04
+1022,Veintidos horas                ,0,00_04
+1023,Veintitres horas               ,0,00_04
+1097,Edad en minutos                ,0,00_04
+1098,Edad en horas no especificada  ,0,00_04
+2001,Un dia                         ,0,00_04
+2002,Dos dias                       ,0,00_04
+2003,Tres dias                      ,0,00_04
+2004,Cuatro dias                    ,0,00_04
+2005,Cinco dias                     ,0,00_04
+2006,Seis dias                      ,0,00_04
+2007,Siete dias                     ,0,00_04
+2008,Ocho dias                      ,0,00_04
+2009,Nueve dias                     ,0,00_04
+2010,Diez dias                      ,0,00_04
+2011,Once dias                      ,0,00_04
+2012,Doce dias                      ,0,00_04
+2013,Trece dias                     ,0,00_04
+2014,Catorce dias                   ,0,00_04
+2015,Quince dias                    ,0,00_04
+2016,Dieciseis dias                 ,0,00_04
+2017,Diecisiete dias                ,0,00_04
+2018,Dieciocho dias                 ,0,00_04
+2019,Diecinueve dias                ,0,00_04
+2020,Veinte dias                    ,0,00_04
+2021,Veintiun dias                  ,0,00_04
+2022,Veintidos dias                 ,0,00_04
+2023,Veintitres dias                ,0,00_04
+2024,Veinticuatro dias              ,0,00_04
+2025,Veinticinco dias               ,0,00_04
+2026,Veintiseis dias                ,0,00_04
+2027,Veintisiete dias               ,0,00_04
+2028,Veintiocho dias                ,0,00_04
+2029,Veintinueve dias               ,0,00_04
+2098,Edad en dias no especificada   ,0,00_04
+3001,Un mes                         ,0,00_04
+3002,Dos meses                      ,0,00_04
+3003,Tres meses                     ,0,00_04
+3004,Cuatro meses                   ,0,00_04
+3005,Cinco meses                    ,0,00_04
+3006,Seis meses                     ,0,00_04
+3007,Siete meses                    ,0,00_04
+3008,Ocho meses                     ,0,00_04
+3009,Nueve meses                    ,0,00_04
+3010,Diez meses                     ,0,00_04
+3011,Once meses                     ,0,00_04
+3098,Edad en meses no especificada  ,0,00_04
+4001,Un año                         ,1,00_04
+4002,Dos años                       ,2,00_04
+4003,Tres años                      ,3,00_04
+4004,Cuatro años                    ,4,00_04
+4005,Cinco años                     ,5,05_14
+4006,Seis años                      ,6,05_14
+4007,Siete años                     ,7,05_14
+4008,Ocho años                      ,8,05_14
+4009,Nueve años                     ,9,05_14
+4010,Diez años                      ,10,05_14
+4011,Once años                      ,11,05_14
+4012,Doce años                      ,12,05_14
+4013,Trece años                     ,13,05_14
+4014,Catorce años                   ,14,05_14
+4015,Quince años                    ,15,15_24
+4016,Dieciseis años                 ,16,15_24
+4017,Diecisiete años                ,17,15_24
+4018,Dieciocho años                 ,18,15_24
+4019,Diecinueve años                ,19,15_24
+4020,Veinte años                    ,20,15_24
+4021,Veintiun años                  ,21,15_24
+4022,Veintidos años                 ,22,15_24
+4023,Veintitres años                ,23,15_24
+4024,Veinticuatro años              ,24,15_24
+4025,Veinticinco años               ,25,25_44
+4026,Veintiseis años                ,26,25_44
+4027,Veintisiete años               ,27,25_44
+4028,Veintiocho años                ,28,25_44
+4029,Veintinueve años               ,29,25_44
+4030,Treinta años                   ,30,25_44
+4031,Treinta y un años              ,31,25_44
+4032,Treinta y dos años             ,32,25_44
+4033,Treinta y tres años            ,33,25_44
+4034,Treinta y cuatro años          ,34,25_44
+4035,Treinta y cinco años           ,35,25_44
+4036,Treinta y seis años            ,36,25_44
+4037,Treinta y siete años           ,37,25_44
+4038,Treinta y ocho años            ,38,25_44
+4039,Treinta y nueve años           ,39,25_44
+4040,Cuarenta años                  ,40,25_44
+4041,Cuarenta y un años             ,41,25_44
+4042,Cuarenta y dos años            ,42,25_44
+4043,Cuarenta y tres años           ,43,25_44
+4044,Cuarenta y cuatro años         ,44,25_44
+4045,Cuarenta y cinco años          ,45,45_64
+4046,Cuarenta y seis años           ,46,45_64
+4047,Cuarenta y siete años          ,47,45_64
+4048,Cuarenta y ocho años           ,48,45_64
+4049,Cuarenta y nueve años          ,49,45_64
+4050,Cincuenta años                 ,50,45_64
+4051,Cincuenta y un años            ,51,45_64
+4052,Cincuenta y dos años           ,52,45_64
+4053,Cincuenta y tres años          ,53,45_64
+4054,Cincuenta y cuatro años        ,54,45_64
+4055,Cincuenta y cinco años         ,55,45_64
+4056,Cincuenta y seis años          ,56,45_64
+4057,Cincuenta y siete años         ,57,45_64
+4058,Cincuenta y ocho años          ,58,45_64
+4059,Cincuenta y nueve años         ,59,45_64
+4060,Sesenta años                   ,60,45_64
+4061,Sesenta y un años              ,61,45_64
+4062,Sesenta y dos años             ,62,45_64
+4063,Sesenta y tres años            ,63,45_64
+4064,Sesenta y cuatro años          ,64,45_64
+4065,Sesenta y cinco años           ,65,>65
+4066,Sesenta y seis años            ,66,>65
+4067,Sesenta y siete años           ,67,>65
+4068,Sesenta y ocho años            ,68,>65
+4069,Sesenta y nueve años           ,69,>65
+4070,Setenta años                   ,70,>65
+4071,Setenta y un años              ,71,>65
+4072,Setenta y dos años             ,72,>65
+4073,Setenta y tres años            ,73,>65
+4074,Setenta y cuatro años          ,74,>65
+4075,Setenta y cinco años           ,75,>65
+4076,Setenta y seis años            ,76,>65
+4077,Setenta y siete años           ,77,>65
+4078,Setenta y ocho años            ,78,>65
+4079,Setenta y nueve años           ,79,>65
+4080,Ochenta años                   ,80,>65
+4081,Ochenta y un años              ,81,>65
+4082,Ochenta y dos años             ,82,>65
+4083,Ochenta y tres años            ,83,>65
+4084,Ochenta y cuatro años          ,84,>65
+4085,Ochenta y cinco años           ,85,>65
+4086,Ochenta y seis años            ,86,>65
+4087,Ochenta y siete años           ,87,>65
+4088,Ochenta y ocho años            ,88,>65
+4089,Ochenta y nueve años           ,89,>65
+4090,Noventa años                   ,90,>65
+4091,Noventa y un años              ,91,>65
+4092,Noventa y dos años             ,92,>65
+4093,Noventa y tres años            ,93,>65
+4094,Noventa y cuatro años          ,94,>65
+4095,Noventa y cinco años           ,95,>65
+4096,Noventa y seis años            ,96,>65
+4097,Noventa y siete años           ,97,>65
+4098,Noventa y ocho años            ,98,>65
+4099,Noventa y nueve años           ,99,>65
+4100,Cien años                      ,100,>65
+4101,Ciento un años                 ,101,>65
+4102,Ciento dos años                ,102,>65
+4103,Ciento tres años               ,103,>65
+4104,Ciento cuatro años             ,104,>65
+4105,Ciento cinco años              ,105,>65
+4106,Ciento seis años               ,106,>65
+4107,Ciento siete años              ,107,>65
+4108,Ciento ocho años               ,108,>65
+4109,Ciento nueve años              ,109,>65
+4110,Ciento diez años               ,110,>65
+4111,Ciento once años               ,111,>65
+4112,Ciento doce años               ,112,>65
+4113,Ciento trece años              ,113,>65
+4114,Ciento catorce años            ,114,>65
+4115,Ciento quince años             ,115,>65
+4116,Ciento dieciseis años          ,116,>65
+4117,Ciento diecisiete años         ,117,>65
+4118,Ciento dieciocho años          ,118,>65
+4119,Ciento diecinueve años         ,119,>65
+4120,Ciento veinte años             ,120,>65
+4998,Edad no especificada   ,,NE
