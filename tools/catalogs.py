@@ -1,6 +1,6 @@
 import pandas as pd
 
-class catalogs:
+class Catalogs:
     def __init__(self):
         pass
         
