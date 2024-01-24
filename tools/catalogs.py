@@ -5,4 +5,6 @@ class Catalogs:
         pass
         
     def get_edad(self):
-        return pd.read_csv("../utils/requeriments/EDADES.csv")
+        return pd.read_csv("./utils/requeriments/EDADES.csv")
+    
+        

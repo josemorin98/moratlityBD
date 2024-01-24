@@ -1,19 +1,20 @@
 import pandas as pd
 import glob
-from catalogs import Catalogs
+from tools.catalogs import Catalogs
+import json
  
 catalogsFunctions = Catalogs()
     
 def welcome():
     return print("Crated by Morin,JC!")
         
-def read_csv_files(files_pattern, colums_select):
+def read_csv_files(files_pattern:list, colums_select:list):
     """
     Reads all CSV files from the specified directory and returns a dictionary
     where keys are file names and values are pandas DataFrames.
         
     Parameters:
-    - directory_path (str): The path of the directory containing CSV files.
+    - files_pattern (str): The path of the directory containing CSV files.
     - colums_select (list): A list of column names
     
     Returns:
@@ -48,11 +49,12 @@ def read_csv_files(files_pattern, colums_select):
     
     return df_results
 
-def filter_data_conditions(dataframe, conditions):
+def filter_data_conditions(dataframe: pd.DataFrame, conditions:json):
     """
     Filters a DataFrame using multiple conditions with .loc.
 
     Parameters:
+    - dataframe: DataFrame with data
     - conditions (dict): A dictionary where the keys are the column names
                            and the values are the desired values for those columns.
     Example:
@@ -74,5 +76,7 @@ def filter_data_conditions(dataframe, conditions):
             filtered = filtered.query("{} {} {}".format(column,value[1],value[0])).copy()
     return filtered
     
-def add_age_by_column():
-    return catalogsFunctions.get_edad()
+def add_age_by_column(dataframe:pd.DataFrame, columnAge:str):
+    edades = catalogsFunctions.get_edad()
+    dataframe = dataframe.merge
+    
