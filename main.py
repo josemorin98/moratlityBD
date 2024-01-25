@@ -1,9 +1,10 @@
 import time
 from tools import handlingData
-
+from source import Nation
 
 def main():
-    print('Starting')
+    print('\nStarting preparation\n')
+    
     # Start time
     startTime = time.time()
     
@@ -24,7 +25,8 @@ def main():
     dataResults = handlingData.filter_data_conditions(dataframe=dataResults,
                                                       conditions=conditionState)
     # Return filtered states data
-    print(f'Filtered states - count {len(dataResults.ENT_OCURR.unique())}')
+    print(f'\nFiltered states - count {len(dataResults.ENT_OCURR.unique())}')
+    
     
     # Select only male and female
     # NOTE: Records with a 'Sex' ID equal to 9 are considered unknown and, therefore, are ignored.
@@ -32,15 +34,35 @@ def main():
     # Filter sex by condition
     dataResults = handlingData.filter_data_conditions(dataframe=dataResults,
                                                       conditions=conditionSex)
-    
-    # Return filtered
+    # Return filtered sex data
     print(f'Filtered sex - count {len(dataResults.SEXO.unique())}')
     
-    print(handlingData.add_age_by_column())
     
-    # Start time
+    # Add age by column code 
+    dataResults = handlingData.add_age_by_column(dataframe=dataResults, columnAge='EDAD')
+    
+    # Preparation ends here
     endTime = time.time()
-    print(f'Time to read: {(endTime-startTime)}')
+    print(f'End preparation (Time = {(endTime-startTime)})')
+    # End time preparation
+    # print(f'Time to read: {(endTime-startTime)}')
+    
+    # Start time National
+    startTime = time.time()
+    print(f'\nStrting National')
+    
+    # set the column count and cause
+    dataResults['CONTEO'] = dataResults['ANIO']
+    
+    # Paramatters to generate national data
+    paramsNational = {
+        'YearCause':{'columnsGruops':['ANIO','CAUSA'],
+                     'columnCount':'CONTEO'}
+    }
+    
+    # Generate National data
+    Nation.generateNation(dataframe=dataResults,paramsNational=paramsNational)
+        
     
 if __name__ == "__main__":
     main()
