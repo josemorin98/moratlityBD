@@ -147,3 +147,34 @@ def group_by(dataframe:pd.DataFrame, by_columns:list, count_column:str) -> pd.Da
     
     return dataframe
 
+def addPoblationNation(dataframe: pd.DataFrame, sex: bool, rangeAge:bool, columnsMerge:list) -> pd.DataFrame:
+    """
+    Adds national population data to the provided DataFrame.
+
+    Parameters:
+    - dataframe (pd.DataFrame): The DataFrame to which national population data will be added.
+    - sex (bool): Whether to add population with sex
+    - rangeAge (bool): Whether to add population with range age
+    
+    Returns:
+    - dataframe (pd.DataFrame): The modified DataFrame with national population data added.
+    """
+    
+    # Get poblation data
+    df_pob = catalogsFunctions.get_poblation()
+    
+    # If the poblation is within range and sex
+    if (sex == False and rangeAge == False):
+        # Get poblation witout sex
+        df_pob = df_pob.loc[df_pob['SEXO']=='Total'].copy()
+        
+        # Group by nation
+        df_pob = df_pob.groupby(by=['ANIO_REGIS','SEXO'])['TOTAL'].sum().reset_index()
+    
+        # Merge poblation with dataframe
+        dataframe = dataframe.merge(df_pob,
+                    right_on=['ANIO_REGIS'],
+                    left_on=columnsMerge,
+                    how='left')
+    dataframe = dataframe.rename(columns={'TOTAL':'POBLACION'})
+    return dataframe
