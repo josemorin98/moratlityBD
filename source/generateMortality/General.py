@@ -1,5 +1,5 @@
 import pandas as pd
-from source.branchMortality import year
+from source.combinationsMortality import year_cause
 from progressbar import ProgressBar
 
 
@@ -8,7 +8,7 @@ def calculateGeneralMortality(dataframe:pd.DataFrame, columnsGruops:list, column
     df_results = pd.DataFrame()
     
     # calculate year with cause
-    df_results = year.generateYear(dataframe=dataframe,
+    df_results = year_cause.generateYearCause(dataframe=dataframe,
                                     columnsGruops=columnsGruops, 
                                     columnCount=columnCount,
                                     columnsPopulation=columnsPopulation)

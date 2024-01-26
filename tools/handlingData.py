@@ -161,7 +161,7 @@ def addPoblationNation(dataframe: pd.DataFrame, sex: bool, rangeAge:bool, column
     """
     
     # Get poblation data
-    df_pob = catalogsFunctions.get_poblation()
+    df_pob = catalogsFunctions.get_population()
     
     # If the poblation is within range and sex
     if (sex == False and rangeAge == False):

@@ -1,7 +1,10 @@
 import pandas as pd
 from tools import handlingData
 
-def generateYear(dataframe:pd.DataFrame, columnsGruops:list, columnCount:str, columnsPopulation:list) -> pd.DataFrame:
+# Anio - Cause
+
+
+def generateYearCause(dataframe:pd.DataFrame, columnsGruops:list, columnCount:str, columnsPopulation:list, spatial:str) -> pd.DataFrame:
     """
     Generates a DataFrame with yearly counts based on specified grouping columns and a count column.
 
@@ -10,9 +13,10 @@ def generateYear(dataframe:pd.DataFrame, columnsGruops:list, columnCount:str, co
     - columns_groups (list): The columns by which to group the DataFrame.
     - column_count (str): The column for which occurrences will be counted.
     - column_population (list): Thecolumns by which to group the population.
+    - spatial (str): The spatial hercachical representation (Nation, Region, State, Cities)
 
     Returns:
-    - df_result (DataFrame): A new DataFrame with yearly counts based on specified grouping columns and count column.
+    - DataFrame: A new DataFrame with yearly counts based on specified grouping columns and count column.
     """
     
     print(f'Group by year')
@@ -26,9 +30,13 @@ def generateYear(dataframe:pd.DataFrame, columnsGruops:list, columnCount:str, co
                                        count_column=columnCount)
     
     # get poblation by nation
-    df_result = handlingData.addPoblationNation(dataframe=df_result,
+    if (spatial == 'Nation'):
+        df_result = handlingData.addPoblationNation(dataframe=df_result,
                                                 sex=False,
                                                 rangeAge=False,
                                                 columnsMerge=columnsPopulation)
+    
+    
+    
     
     return df_result

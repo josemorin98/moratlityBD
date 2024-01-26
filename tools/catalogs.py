@@ -13,8 +13,11 @@ class Catalogs:
         """
         return pd.read_csv("./utils/requeriments/EDADES.csv")\
             
-    def get_poblation(self) -> pd.DataFrame:
+    def get_population(self) -> pd.DataFrame:
+        """
+        Retrieves population data from the 'poblaciones_edad_state_new.csv' file.
+
+        Returns:
+        - pd.DataFrame: DataFrame containing population data.
+        """
         return pd.read_csv("./utils/requeriments/poblaciones_edad_state_new.csv")
-    
-    
-        

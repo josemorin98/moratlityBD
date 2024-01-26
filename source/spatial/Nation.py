@@ -15,7 +15,7 @@ def generateNation(dataframe:pd.DataFrame,paramsNational:dict):
     - params_national (dict): A dictionary containing parameters for generating national data combinations.
 
     Returns:
-    - pd.DataFrame: A DataFrame with different combinations of data for rate calculation.
+    - DataFrame: A DataFrame with different combinations of data for rate calculation.
     """
     dfResults = pd.DataFrame()
     levels = 4
