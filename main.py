@@ -4,7 +4,7 @@ from source.spatial import Nation
 import pandas as pd
 
 def main():
-    print('\nStarting preparation\n')
+    print('')
     
     # Start time
     startTime = time.time()
@@ -16,6 +16,7 @@ def main():
     colums_select = ['ANIO_REGIS', 'ENT_OCURR', 'MUN_OCURR', 'CAUSA_DEF', 'SEXO' ,'EDAD']
     
     # Read the files in the directory
+    print('\tReading files')
     dataResults = handlingData.read_csv_files(files_pattern=files_pattern,
                                               colums_select=colums_select)
 
@@ -48,6 +49,8 @@ def main():
     # End time preparation
     # print(f'Time to read: {(endTime-startTime)}')
     
+    
+    ################################################################
     # Start time National
     startTime = time.time()
     
@@ -56,20 +59,22 @@ def main():
     # DataFrame global
     dfNation = pd.DataFrame()
     
-    # set the column count and cause
-    dataResults['CONTEO'] = dataResults['ANIO_REGIS']
-    
     # Paramatters to generate national data
     paramsNational = {
-        'YearCause':{'columnsGroups':['ANIO_REGIS','CAUSA_DEF'],
-                     'columnCount':'CONTEO',
-                     'columnsGroupPopulation':['ANIO_REGIS']}
-    }
+        'General':{ 'columnsGroupBy': ['ANIO_REGIS','CAUSA_DEF'],
+                    'columnCount':'ANIO_REGIS',
+                    'columnsAddPopulations':['','SEXO'],
+                    'spatial':'national',
+                    'conditionsData': {'calculateRate':'normal',
+                                    'extractNCharts':1,
+                                    'fillTotal':[['ENT_CVE','MUN_CVE','RANGO_EDAD'],'Total']}}}
     
     # Generate National data
     dfNation = Nation.generateNation(dataframe=dataResults,paramsNational=paramsNational)
     print('\n\n')
     print(dfNation.head(5))
+    ################################################################
+    
     
 if __name__ == "__main__":
     main()

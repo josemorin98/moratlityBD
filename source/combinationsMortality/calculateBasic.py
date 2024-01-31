@@ -1,10 +1,10 @@
 import pandas as pd
-from tools import handlingData
+from tools import handlingData, calculateRates
 
 # Anio - Cause
 
 
-def generateYearCause(dataframe:pd.DataFrame, columnsGruops:list, columnCount:str, columnsPopulation:list, spatial:str) -> pd.DataFrame:
+def generateRates(dataframe:pd.DataFrame, columnsGroup:list, columnCount:str, columnsPopulation:list, spatial:str) -> pd.DataFrame:
     """
     Generates a DataFrame with yearly counts based on specified grouping columns and a count column.
 
@@ -32,7 +32,7 @@ def generateYearCause(dataframe:pd.DataFrame, columnsGruops:list, columnCount:st
     # get poblation by nation
     if (spatial == 'Nation'):
         df_result = handlingData.addPoblationNation(dataframe=df_result,
-                                                sex=False,
+                                                 sex=False,
                                                 rangeAge=False,
                                                 columnsMerge=columnsPopulation)
     

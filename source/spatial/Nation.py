@@ -27,27 +27,12 @@ def generateNation(dataframe:pd.DataFrame,paramsNational:dict):
         
         #--------------------------------------------------------------------
         # Get parameters for year and cause
-        columnsGruops = paramsNational['YearCause']['columnsGroups']
-        columnCount = paramsNational['YearCause']['columnCount']
-        columnsPopulations = paramsNational['YearCause']['columnsGroupPopulation']
+        conditionsGeneral = paramsNational['General']
         
         # Generate mortality general
-        dfResults = General.calculateGeneralMortality(dataframe=dataframe,
-                                    columnsGruops=columnsGruops, 
-                                    columnCount=columnCount,
-                                    columnsPopulation=columnsPopulations)
+        dfResults = General.calculateGeneralMortality(dataframe=dataframe,conditionsGeneral=conditionsGeneral)
         
-        # Fill columns with all (Total)
-        dfResults['ENT_CVE'] = 'Total'
-        dfResults['MUN_CVE'] = 'Total'
-        dfResults['RANGO_EDAD'] = 'Total'
         
-        # Sort columns
-        dfResults = dfResults.reindex(columns=['CAUSA_DEF','ANIO_REGIS','ENT_CVE','MUN_CVE','SEXO','RANGO_EDAD','CONTEO','POBLACION'])
-
-        # Put rates
-        dfResults = calculateRates.calculate_crude_rates(dataframe=dfResults, population='POBLACION', count='CONTEO')
-
         #--------------------------------------------------------------------
         #Get parameters for year, cause, sex
         

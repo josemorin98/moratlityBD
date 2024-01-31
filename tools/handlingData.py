@@ -178,3 +178,25 @@ def addPoblationNation(dataframe: pd.DataFrame, sex: bool, rangeAge:bool, column
                     how='left')
     dataframe = dataframe.rename(columns={'TOTAL':'POBLACION'})
     return dataframe
+
+def select_first_n_characters(dataframe: pd.DataFrame, column_name: str, n: int) -> pd.DataFrame:
+    """
+    Selects the first N characters from a specified column in a DataFrame.
+
+    Parameters:
+    - dataframe (pd.DataFrame): The DataFrame containing the data.
+    - column_name (str): The name of the column from which to select characters.
+    - n (int): The number of characters to select.
+
+    Returns:
+    - pd.DataFrame: A DataFrame with a new column containing the first N characters of the specified column.
+    """
+    # Check if the column exists in the DataFrame
+    if column_name not in dataframe.columns:
+        raise ValueError(f"Column '{column_name}' not found in the DataFrame.")
+
+    # Select the first N characters from the specified column
+    dataframe[column_name] = dataframe[column_name].str.slice(0, n)
+
+    return dataframe
+ 
